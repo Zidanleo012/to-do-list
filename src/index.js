@@ -1,4 +1,4 @@
-import "./styles.css"
-import foo from "./modules/addProjectStyle"
-
-foo()
+import "./styles.css";
+import "./modules/dropupButton";
+import "./modules/projectDisplay";
+import "./modules/displayContentPage";

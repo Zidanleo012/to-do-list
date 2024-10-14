@@ -1,7 +1,7 @@
-export default function () {
+export default (function(){
     const dropbtn = document.querySelector(".dropbtn")
     const dropUpContent = document.querySelector(".dropup-content")
-    let isDisplayed = false;
+    let isDisplayed = true;
 
     dropbtn.addEventListener('click', e => {
         if (isDisplayed) {
@@ -12,4 +12,4 @@ export default function () {
             isDisplayed = true
         }
     })
-}
+})();

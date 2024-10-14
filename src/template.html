@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do list</title>
+    <script src="https://kit.fontawesome.com/607bab5066.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,21 +18,36 @@
         <div class="project-list">
             <div class="project">
                 <p class="title">Project's title</p>
+                <i class="fa-solid fa-x delete-icon"></i>
+            </div>
+            <div class="project">
+                <p class="title">Project's title</p>
+                <i class="fa-solid fa-x delete-icon"></i>
+            </div>
+            <div class="project">
+                <p class="title">Project's title</p>
+                <i class="fa-solid fa-x delete-icon"></i>
             </div>
         </div>
         <div class="dropup">
             <button type="button" class="dropbtn">+ New Project +</button>
             <div class="dropup-content">
                 <form action="submit">
-                    <input type="text" class="project-title">
-                    <input type="text" class="project-desc">
-                    <p>blablabla</p>
+                    <div class="p-title-wrapper">
+                        <label for="project-title">Title</label>
+                        <input type="text" name="project-title" id="project-title">
+                    </div>
+                    <div class="p-desc-wrapper">
+                        <label for="project-desc">Description</label>
+                        <textarea name="project-desc" id="project-desc"></textarea>
+                    </div>
+                    <button type="button" class="add-project">ADD</button>
                 </form>
             </div>
         </div>
     </section>
     <section class="content">
-        <p class="content-title">Project's Title</p>
+        <!-- <p class="content-title">Project's Title</p>
         <div class="todo-wrapper">
             <p class="content-desc">A világ de anyádnak érte mi az. Nem alá énekem ér el a. Vadállat de.</p>
             <div class="todo-list">
@@ -42,7 +58,7 @@
                 <div class="todo"></div>
                 <div class="todo"></div>
             </div>
-        </div>
+        </div> -->
     </section>
 </body>
 
