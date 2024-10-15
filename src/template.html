@@ -16,32 +16,22 @@
         </div>
         <p>YOUR PROJECTS</p>
         <div class="project-list">
-            <div class="project">
-                <p class="title">Project's title</p>
-                <i class="fa-solid fa-x delete-icon"></i>
-            </div>
-            <div class="project">
-                <p class="title">Project's title</p>
-                <i class="fa-solid fa-x delete-icon"></i>
-            </div>
-            <div class="project">
-                <p class="title">Project's title</p>
-                <i class="fa-solid fa-x delete-icon"></i>
-            </div>
+
         </div>
         <div class="dropup">
             <button type="button" class="dropbtn">+ New Project +</button>
             <div class="dropup-content">
-                <form action="submit">
+                <form action="submit" class="drop-up-form">
                     <div class="p-title-wrapper">
-                        <label for="project-title">Title</label>
+                        <label for="project-title">*Title</label>
                         <input type="text" name="project-title" id="project-title">
                     </div>
+                    <p class="pseudo-input">*The Totle cannot empty</p>
                     <div class="p-desc-wrapper">
                         <label for="project-desc">Description</label>
                         <textarea name="project-desc" id="project-desc"></textarea>
                     </div>
-                    <button type="button" class="add-project">ADD</button>
+                    <button type="submit" class="add-project">ADD</button>
                 </form>
             </div>
         </div>
@@ -60,6 +50,26 @@
             </div>
         </div> -->
     </section>
+    <div class="dropdown">
+        <!-- <button id="dropdownButton">Open Form</button> -->
+        <div id="formContainer" class="dropdown-content">
+            <form id="dropdownForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

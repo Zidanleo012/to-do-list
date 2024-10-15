@@ -1,5 +1,5 @@
 import { Project } from "./createProjectObject";
-import { displayContentPage } from "./displayContentPage"
+import { displayContentPage, getCurrentProject } from "./displayTodoPage"
 
 const projectListArr = []
 
@@ -33,6 +33,7 @@ function displayContent(el) {
         let parent = el.parentElement;
         let indexOfItem = Array.prototype.indexOf.call(parent.children, child);
 
+        getCurrentProject(projectListArr[indexOfItem])
         displayContentPage(projectListArr[indexOfItem])
         // console.log(projectListArr[Array.prototype.indexOf.call(parent.children, child)])
 
@@ -40,8 +41,6 @@ function displayContent(el) {
 }
 
 function updateNewList(el) {
-    // const projectList = document.querySelectorAll('.project');
-
     if (el) {
         el.addEventListener('click', e => {
             e.stopPropagation()
@@ -51,8 +50,6 @@ function updateNewList(el) {
             console.log(projectListArr)
         })
     }
-
-    // return indexEl;
 }
 
 (function () {
@@ -60,14 +57,23 @@ function updateNewList(el) {
     const projectTitle = document.querySelector("#project-title");
     const projectDesc = document.querySelector("#project-desc");
     const deleteIcon = document.querySelectorAll('.delete-icon');
+    const dropUpForm = document.querySelector('.drop-up-form')
+
+    dropUpForm.addEventListener('submit', e => {
+        e.preventDefault()
+    })
 
     addProject.addEventListener('click', e => {
         let title = projectTitle.value;
         let desc = projectDesc.value;
 
-        const project = new Project(title, desc);
-        projectListArr.push(project)
-        displayProject()
+        if (title !== '') {
+            projectTitle.value = '';
+            projectDesc.value = '';
+            const project = new Project(title, desc);
+            projectListArr.push(project)
+            displayProject()
+        }
     })
 
     deleteIcon.forEach(item => {
@@ -82,3 +88,7 @@ function updateNewList(el) {
 
 
 })()
+
+export {
+    projectListArr
+}
