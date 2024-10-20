@@ -1,14 +1,17 @@
 export function Project(title, description) {
     this.title = title;
     this.description = description;
-    this.toDoList = {}
+    this.toDoList = [];
 }
 
 export function addToDo(obj, title, desc, dueDate, priority) {
-    obj.toDoList.title = title;
-    obj.toDoList.desc = desc;
-    obj.toDoList.dueDate = dueDate;
-    obj.toDoList.priority = priority;
+    obj.toDoList.push({
+        check: false,
+        title,
+        desc,
+        dueDate,
+        priority
+    })
 }
 
 // todo title, todo desc, priority, dueDate

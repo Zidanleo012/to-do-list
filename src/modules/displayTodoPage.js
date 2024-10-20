@@ -1,6 +1,7 @@
 import { addToDo } from "./createProjectObject";
 
 export function displayContentPage(obj) {
+    console.log('on displayContentPage: ', obj)
     const contentSection = document.querySelector('.content');
 
     while (contentSection.hasChildNodes()) {
@@ -38,28 +39,8 @@ function addButtonEvent(el) {
         formContainer.style.display = formContainer.style.display === "block" ? "none" : "block";
     })
 
-    document.querySelector("#dropdownForm").addEventListener("submit", (event) => {
-        event.preventDefault(); // Prevent form from refreshing the page
-        alert("Form submitted successfully!");
-    })
+    // document.querySelector("#dropdownForm").addEventListener("submit", (event) => {
+    //     event.preventDefault(); // Prevent form from refreshing the page
+    //     alert("Form submitted successfully!");
+    // })
 }
-
-export function getCurrentProject(obj) {
-    let currentProject = obj;
-    return currentProject;
-}
-
-// (() => {
-//     // script.js
-//     document.getElementById("dropdownButton").addEventListener("click", () => {
-//         const formContainer = document.getElementById("formContainer");
-//         formContainer.style.display =
-//             formContainer.style.display === "block" ? "none" : "block";
-//     });
-
-//     document.getElementById("dropdownForm").addEventListener("submit", (event) => {
-//         event.preventDefault(); // Prevent form from refreshing the page
-//         alert("Form submitted successfully!");
-//     });
-
-// })()

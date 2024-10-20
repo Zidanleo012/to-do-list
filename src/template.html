@@ -21,7 +21,7 @@
         <div class="dropup">
             <button type="button" class="dropbtn">+ New Project +</button>
             <div class="dropup-content">
-                <form action="submit" class="drop-up-form">
+                <form class="drop-up-form">
                     <div class="p-title-wrapper">
                         <label for="project-title">*Title</label>
                         <input type="text" name="project-title" id="project-title">
@@ -37,7 +37,7 @@
         </div>
     </section>
     <section class="content">
-        <!-- <p class="content-title">Project's Title</p>
+        <p class="content-title">Project's Title</p>
         <div class="todo-wrapper">
             <p class="content-desc">A világ de anyádnak érte mi az. Nem alá énekem ér el a. Vadállat de.</p>
             <div class="todo-list">
@@ -48,25 +48,33 @@
                 <div class="todo"></div>
                 <div class="todo"></div>
             </div>
-        </div> -->
+        </div>
     </section>
     <div class="dropdown">
         <!-- <button id="dropdownButton">Open Form</button> -->
         <div id="formContainer" class="dropdown-content">
             <form id="dropdownForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
+                <label for="desc">Description</label>
+                <input type="text" id="desc" name="desc" required><br>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br>
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="dueDate" required><br>
 
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" min="1" required><br>
+               <label for="priority">Priority</label>
+                <select id="priority" name="priority" required>
+                    <option value="trivial">Trivial</option>
+                    <option value="peripheral">Peripheral</option>
+                    <option value="pivotal">Pivotal</option>
+                    <option value="critical">Critical</option>
+                </select>
 
-                <button type="submit">Submit</button>
+                <div class="button-wrapper">
+                    <button type="button" class="close">Close</button>
+                    <button type="submit" id="add-todo-button">Submit</button>
+                </div>
             </form>
         </div>
     </div>
